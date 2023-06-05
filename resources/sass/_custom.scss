@@ -1,0 +1,133 @@
+.grid-container1{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px !important;
+    gap: 10px;
+    width: auto;
+    align-content: space-evenly;
+}
+
+.grid-container1 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow-wrap: break-word;
+}
+
+.myCard1{
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myImage{
+    text-align: center;
+    padding: 10px;
+}
+
+.cent {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px !important;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-content: center;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+}
+
+.myImage1{
+    width: 48px !important;
+    height: 64px !important;
+}
+
+.grid-item1{
+    grid-column: 1/ span 2;
+}
+
+.grid-item2{
+    grid-column: 3/ span 1;
+    height: fit-content;
+}
+
+.grid-item3{
+    grid-column: 1/ span 3;
+}
+
+.content-height{
+    height: fit-content;
+}
+
+.getMember{
+    cursor: pointer;
+}
+
+.new-member{
+    width: 100%;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.bg-ws{
+    background-color: whitesmoke;
+}
+
+.grid-container3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px !important;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-content: center;
+    background-color: #f8fafc;
+}
+
+.pagination{
+    grid-column: 1/ span 3;
+}
