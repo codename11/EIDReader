@@ -41,7 +41,9 @@
                     @foreach($members as $member)
                         
                         <tr onclick="location.href='/show/{{$member->id}}'; " class="getMember">
-                            <td><img src={{asset($member->portrait)}} class="rounded myImage1" alt={{$member->portrait}}></td>
+                            <td><img src={{asset($member->portrait)}} class="rounded myImage1" alt={{$member->portrait}}>
+                                <br/><small>{{$member->role && $member->role->name ? $member->role->name : "/ no role"}}</small>
+                            </td>
                             <td>{{$member->surname}}</td>
                             <td>{{$member->parentGivenName}}</td>
                             <td>{{$member->givenName}}</td>
@@ -67,6 +69,13 @@
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-outline-danger content-height">
                                         Obriši člana
+                                    </button>
+                                </form>
+
+                                <form method="POST" action="/dashboard/{{$member->id}}" class="">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-success content-height">
+                                        Dodaj rolu
                                     </button>
                                 </form>
                                

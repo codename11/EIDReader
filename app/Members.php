@@ -23,4 +23,8 @@ class Members extends Model
         "portrait"
     ];
 
+    public function role(){
+        return $this->hasOne("App\Role", "id", "role_id");
+    }
+
 }

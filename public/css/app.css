@@ -139,6 +139,34 @@
   grid-column: 1/span 3;
 }
 
+.role-item1 {
+  grid-column: 1/span 3;
+  position: absolute;
+  top: -15px;
+  left: 35px;
+  background-color: #f8f9fa;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+.role-container {
+  border: #336699 dashed 2px;
+  border-radius: 5px;
+  padding-top: 30px !important;
+  width: 385px;
+}
+
+.role-item2 {
+  grid-column: 1/span 3;
+  position: absolute;
+  bottom: -20px;
+  left: 110px;
+  background-color: #f8f9fa;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /*!
  * Bootstrap v4.6.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors

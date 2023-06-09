@@ -13,18 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-//Auth::routes();
-
-/*Route::get('/welcome', function () {
-    return view('welcome');
-});*/
-
-//Authentication
-/*Route::get('/register', 'AuthController@register')->name('register');
-Route::get('/login', 'AuthController@login')->name('login');
-Route::get('/logout', 'AuthController@logout')->middleware('auth:web');*/
-
 Route::get('/welcome', 'MembersController@welcome')->name('welcome');
 Route::get('/index', "MembersController@index")->name('index')->middleware('IsAdmin');
 Route::post('/store', "MembersController@store")->name('store');
@@ -32,8 +20,6 @@ Route::patch('/update/{id}', "MembersController@update")->name('update')->middle
 Route::delete('/delete/{id}', "MembersController@destroy")->name('destroy')->middleware('IsAdmin');
 Route::get('/show/{id}', "MembersController@show")->name('show')->middleware('IsAdmin');
 
-/*Route::get('/index', "MembersController@index")->name('index');
-Route::post('/store', "MembersController@store")->name('store')->middleware("auth:web");
-Route::patch('/update/{id}', "MembersController@update")->name('update')->middleware("auth:web");
-Route::delete('/delete/{id}', "MembersController@destroy")->name('destroy')->middleware("auth:web");
-Route::get('/show/{id}', "MembersController@show")->name('show')->middleware("auth:web");*/
+//Roles
+Route::post('/dashboard/{member_id}', 'RolesController@dashboard')->name('dashboard')->middleware('IsAdmin');
+Route::patch('/dashboard/update_member_role', 'RolesController@addRoleToMember')->name('addRoleToMember')->middleware('IsAdmin');

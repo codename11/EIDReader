@@ -37,7 +37,7 @@ class MembersController extends Controller
             ->paginate(5);
         }
         else{
-            $members = Members::paginate(5);
+            $members = Members::with("role")->paginate(5);
         }
         
         return view("pages.index", compact("members"));
@@ -248,4 +248,5 @@ class MembersController extends Controller
         return view("pages.delete", compact("response")); 
 
     }
+
 }
